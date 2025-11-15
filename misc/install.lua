@@ -1,6 +1,6 @@
 computer.beep(5.0)
 print("Load internet...")
-internet = computer.getPCIDevices(findClass("FINInternetCard"))[1]
+internet = computer.getPCIDevices(classes.FINInternetCard)[1]
 if not internet then
 	print("ERROR! No internet-card found! Please install a internet card!")
 	computer.beep(0.2)
@@ -11,7 +11,7 @@ print("Load filesystem...")
 filesystem.initFileSystem("/dev")
 
 local drive = ""
-for _,f in pairs(filesystem.childs("/dev")) do
+for _,f in pairs(filesystem.children("/dev")) do
 	if not (f == "serial") then
 		drive = f
 		break
