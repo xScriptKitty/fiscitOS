@@ -105,7 +105,7 @@ end
 
 function doFile(parentPath, file)
 	local path = filesystem.path(parentPath, file[1])
-	requestFile("https://raw.githubusercontent.com/Panakotta00/FicsIt-OS/main/" .. path, path)
+	requestFile("https://raw.githubusercontent.com/xScriptKitty/fiscitOS/main/" .. path, path)
 end
 
 function doFolder(parentPath, folder)
@@ -138,9 +138,9 @@ while #requests > 0 do
 end
 
 print("Request EEPROM BIOS...")
-code, data = internet:request("https://raw.githubusercontent.com/Panakotta00/FicsIt-OS/main/misc/bootLoader.lua", "GET", ""):await()
+code, data = internet:request("https://raw.githubusercontent.com/xScriptKitty/fiscitOS/main/misc/bootLoader.lua", "GET", ""):await()
 if code ~= 200 or not data then
-	print("ERROR! Failed to request EEPROM BIOS from 'https://raw.githubusercontent.com/Panakotta00/FicsIt-OS/main/misc/bootLoader.lua'")
+	print("ERROR! Failed to request EEPROM BIOS from 'https://raw.githubusercontent.com/xScriptKitty/fiscitOS/main/misc/bootLoader.lua'")
 	computer.beep(0.2)
 	return
 end
