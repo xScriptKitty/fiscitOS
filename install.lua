@@ -11,7 +11,7 @@ print("Load filesystem...")
 filesystem.initFileSystem("/dev")
 
 local drive = ""
-for _,f in pairs(filesystem.childs("/dev")) do
+for _,f in pairs(filesystem.children("/dev")) do
 	if not (f == "serial") then
 		drive = f
 		break
